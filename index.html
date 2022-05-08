@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html> 
+<head>
+
+	<title> Sadaqatul Fitr Calculating </title>
+	<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+	
+	
+
+	<div class="main">
+		<div class="margin">
+			<h1> <span class="colr">'Sadaqatul Fitr'</span> Calculating </h1>
+			<p> You can give sadaqatul fitr with five types of food. <br>
+			With which do you want to give? </p>
+			<button onclick="form1()"> 1. Wheat </button>
+			<button onclick="form2()"> 2. Barley </button>
+			<button onclick="form3()"> 3. Raisins </button>
+			<button onclick="form4()"> 4. Dates </button>
+			<button onclick="form5()"> 5. Cheese </button> <br> <br>
+			<div>
+				<form id="form">
+				
+				</form>
+			</div>
+			<h4 id="result"> </h4>
+		</div>
+	</div>
+
+	
+
+	<script>
+		var myVar = document.getElementById('form');
+				
+		function form1() {
+			myVar.innerHTML = '<label> What is the price of <span class="colr">Wheat</span> per kg in your area? <label> <br> <input type="text" placeholder="Enter the amount" id="input1"> Currency </input> <br> <input type="submit" value="Calculate"> </input>'	
+		}
+		myVar.addEventListener('submit', function(event) {
+				event.preventDefault();
+			
+				var price = document.getElementById('input1').value;
+				console.log(price);
+				price= parseFloat(price);
+				var total = price*1.65;
+				document.querySelector('#result').innerHTML= "Sadaqatul Fitr of wheat per head: "+total+" Currency"
+			});
+		
+ 
+			
+			
+		var myVar = document.querySelector("#form");
+		function form2() {
+			myVar.innerHTML = '<label> What is the price of <span class="colr">Barley</span> per kg in your area? <label> <br> <input type="text" placeholder="Enter the amount" id="input2"> Currency </input> <br> <input type="submit" value="Calculate"> </input>'
+		}
+		myVar.addEventListener('submit', function(event) {
+				event.preventDefault();
+			
+				var price = document.getElementById('input2').value;
+				console.log(price);
+				price= parseFloat(price);
+				var total = price*3.3;
+				document.querySelector('#result').innerHTML= "Sadaqatul Fitr of barley per head: "+total+" Currency"
+			});
+			
+			
+			
+		var myVar = document.querySelector("#form");
+		function form3() {
+			myVar.innerHTML = '<label> What is the price of <span class="colr">Raisins</span> per kg in your area? <label> <br> <input type="text" placeholder="Enter the amount" id="input3"> Currency </input> <br> <input type="submit" value="Calculate"> </input>'
+		}
+		myVar.addEventListener('submit', function(event) {
+				event.preventDefault();
+			
+				var price = document.getElementById('input3').value;
+				console.log(price);
+				price= parseFloat(price);
+				var total = price*3.3;
+				document.querySelector('#result').innerHTML= "Sadaqatul Fitr of raisins per head: "+ total+" Currency"
+			});
+			
+			
+		
+		var myVar = document.querySelector("#form");
+		function form4() {
+			myVar.innerHTML = '<label> What is the price of <span class="colr">Dates</span> per kg in your area? <label> <br> <input type="text" placeholder="Enter the amount" id="input4"> Currency </input> <br> <input type="submit" value="Calculate"> </input>'
+		}
+		myVar.addEventListener('submit', function(event) {
+				event.preventDefault();
+			
+				var price = document.getElementById('input4').value;
+				console.log(price);
+				price= parseFloat(price);
+				var total = price*3.3;
+				document.querySelector('#result').innerHTML= "Sadaqatul Fitr of dates per head: "+total+" Currency"
+			});
+			
+			
+		
+		var myVar = document.querySelector("#form");
+		function form5() {
+			myVar.innerHTML = '<label> What is the price of <span class="colr">Cheese</span> per kg in your area? <label> <br> <input type="text" placeholder="Enter the amount" id="input5"> Currency </input> <br> <input type="submit" value="Calculate"> </input>'
+		}
+		myVar.addEventListener('submit', function(event) {
+				event.preventDefault();
+			
+				var price = document.getElementById('input5').value;
+				console.log(price);
+				price= parseFloat(price);
+				var total = price*3.3;
+				document.querySelector('#result').innerHTML= "Sadaqatul Fitr of cheese per head: "+total+" Currency"
+			});
+			
+			
+	</script>
+	
+	
+</body>
+</html>
